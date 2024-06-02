@@ -34,7 +34,7 @@ jobs:
         run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
 
       - name: Build Docker image
-        run: docker build . --file Dockerfile --tag jinnshintaro/vueapp:latest
+        run: docker build . --file C:\Users\wahan\Documents\GitHub\VueJS-Docker\Dockerfile --tag jinnshintaro/vueapp:latest
 
       - name: Push to Docker Hub
         run: docker push jinnshintaro/vueapp:latest
