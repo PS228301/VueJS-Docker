@@ -35,6 +35,7 @@ jobs:
 
       - name: Build Docker image
         run: docker build . --file Dockerfile --tag jinnshintaro/vueapp:latest
+        working-directory: ${{ github.workspace }}
 
       - name: Push to Docker Hub
         run: docker push jinnshintaro/vueapp:latest
